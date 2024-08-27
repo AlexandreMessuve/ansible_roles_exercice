@@ -1,0 +1,9 @@
+---
+# tasks file for roles/ssh_keygen
+- name: generate SSH key
+  openssh_keypair:
+    path: /tmp/key_hosts
+    type: rsa
+    size: 4096
+    state: present
+    force: false

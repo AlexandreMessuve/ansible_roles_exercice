@@ -1,0 +1,12 @@
+- name: install local ssh key 
+  connection: local
+  hosts: localhost
+  roles:
+  - ssh_keygen
+
+- name: install nginx server and user
+  hosts: all
+  become: true
+  roles:
+  - users
+  - nginx
